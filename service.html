@@ -159,7 +159,7 @@
               </p>
               <span class="text-uppercase" style="color: lightpink" !important>From $15</span>
             </div>
-            <a class="btn btn-square book-now" data-service="Hairart" href="form.html">
+            <a class="btn btn-square book-now" data-service="Hairart" href="form.html" onclick="addService('Hairart - $29')">
               <i class="fa fa-plus" style="color: pink"></i>
             </a>
           </div>
@@ -178,7 +178,7 @@
               </p>
               <span class="text-uppercase" style="color: lightpink" !important>From $15</span>
             </div>
-            <a class="btn btn-square book-now" data-service="Spa Treatment" href="form.html">
+            <a class="btn btn-square book-now" data-service="Spa Treatment" href="form.html" onclick="addService('Spa Treatment - $35')">
               <i class="fa fa-plus" style="color: pink"></i>
             </a>
           </div>
@@ -197,7 +197,7 @@
               </p>
               <span class="text-uppercase" style="color: lightpink" !important>From $15</span>
             </div>
-            <a class="btn btn-square book-now" data-service="Men's Shave" href="form.html">
+            <a class="btn btn-square book-now" data-service="Men's Shave" href="form.html" onclick="addService('Men\'s Shave - $23')">
               <i class="fa fa-plus" style="color: pink"></i>
             </a>
           </div>
@@ -216,7 +216,7 @@
               </p>
               <span class="text-uppercase" style="color: lightpink" !important>From $15</span>
             </div>
-            <a class="btn btn-square book-now" data-service="Skin Treatment" href="form.html">
+            <a class="btn btn-square book-now" data-service="Skin Treatment" href="form.html"onclick="addService('Skin Treatment - $19')">
               <i class="fa fa-plus" style="color: pink"></i>
             </a>
           </div>
@@ -235,7 +235,7 @@
               </p>
               <span class="text-uppercase" style="color: lightpink" !important>From $15</span>
             </div>
-            <a class="btn btn-square book-now" data-service="Facial" href="form.html">
+            <a class="btn btn-square book-now" data-service="Facial" href="form.html"onclick="addService('Facial - $15')">
               <i class="fa fa-plus" style="color: pink"></i>
             </a>
           </div>
@@ -254,7 +254,7 @@
               </p>
               <span class="text-uppercase" style="color: lightpink" !important>From $15</span>
             </div>
-            <a class="btn btn-square book-now" data-service="Eyebrow" href="form.html">
+            <a class="btn btn-square book-now" data-service="Eyebrow" href="form.html"onclick="addService('Eyebrow - $39')">
               <i class="fa fa-plus" style="color: pink"></i>
             </a>
           </div>
@@ -354,6 +354,16 @@
 
   <!--  Javascript -->
   <script src="js/main.js"></script>
+  <script>
+    function addService(serviceName) {
+      let selected = JSON.parse(localStorage.getItem("selectedServices")) || [];
+      if (!selected.includes(serviceName)) {
+        selected.push(serviceName);
+        localStorage.setItem("selectedServices", JSON.stringify(selected));
+      }
+    }
+  </script>
+  
 </body>
 
 </html>
